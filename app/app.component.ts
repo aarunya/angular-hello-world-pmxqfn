@@ -17,6 +17,9 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     let arrayLength1 = this.arrayList.length;
+    if (arrayLength1 > 8) {
+      this.nextIndex = 1;
+    }
     for (let i = 0; i <= arrayLength1; i + 8) {
       if (this.newArray.length == 0) {
         this.newArray.push(this.arrayList.slice(i, i + 8));
