@@ -17,8 +17,8 @@ export class AppComponent implements OnInit {
 
   ngOnInit() {
     let arrayLength = this.arrayList.length;
-    for (let i = 1; i < arrayLength; i + 8) {
-      newArray.push(this);
+    for (let i = 0; i < arrayLength; i + 8) {
+      if (this.newArray) this.newArray.push(this.arrayList.slice(i));
     }
   }
   onPrevIndexClick() {
